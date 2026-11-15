@@ -39,7 +39,7 @@ pytest                           # deve passar tudo
 ## Execução
 
 1. Baixe os vídeos do Drive do grupo para `data/` (link: TODO).
-2. Coloque a homografia do enunciado em `data/H.txt` (matriz 3×3, mundo em mm → imagem em px).
+2. A homografia H_L do enunciado já está em `data/H.txt`. Para conferir sobre um quadro: `python src/conferir_homografia.py data/<video>.mp4`.
 3. Rode:
 
 ```bash

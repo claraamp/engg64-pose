@@ -1,0 +1,5 @@
+# H_L do enunciado (Eq. 3): s[u v 1]^T = H_L [XW YW 1]^T
+# (u, v) em px na resolucao original 3840x2160; (XW, YW) em mm
+0        -0.9102  1952.5904
+-0.9236   0       1081.7977
+0         0       1
