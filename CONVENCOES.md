@@ -10,7 +10,8 @@ Este arquivo e o `src/convencoes.py` são o contrato entre os módulos. O `.py` 
 | Centro de pixel | Inteiro: o pixel (0, 0) cobre [−0,5; 0,5] |
 | θI | A partir de +u, girando de +u para +v. Com v para baixo, θI positivo aparece **horário** na tela. Intervalo (−π/2, π/2] |
 | Escala | Processamos quadros reduzidos por `ESCALA`, mas uc, vc no CSV estão **sempre em 3840 × 2160**. Converter só com `para_original()` / `para_reduzida()` |
-| Homografia | `[u, v, 1]ᵀ ~ H · [XW, YW, 1]ᵀ`, de mundo (mm, ZW = 0) para imagem original (px). A pose usa H⁻¹. H fica em `data/H.txt` |
+| Homografia | `s[u, v, 1]ᵀ = H_L · [XW, YW, 1]ᵀ` (Eq. 2), de mundo (mm, ZW = 0) para imagem **original** (px). A pose usa H_L⁻¹ (Eqs. 4–6). H_L (Eq. 3) está em `data/H.txt` |
+| Eixos do mundo | Origem sob a câmera, perto do centro da imagem (px 1952,6; 1081,8). +XW aponta para **cima** na imagem (−v) e +YW para a **esquerda** (−u). ~1,1 mm por pixel. Os sinais de θI e ψ são opostos: um giro horário na tela aumenta θI e diminui ψ (ψ ≈ −90° − θI) |
 | ψ | Frente do robô a partir de +XW, em (−π, π], com a ambiguidade de 180° já resolvida. Para plotar, `np.unwrap` |
 | Unidades | mm e rad nos arquivos; graus só nos rótulos dos gráficos |
 
