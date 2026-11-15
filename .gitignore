@@ -1,0 +1,30 @@
+# vídeos e saídas grandes ficam fora do git (link no README)
+data/*
+!data/.gitkeep
+!data/H.txt
+results/*
+!results/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.mat
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# LaTeX (o relatório vive no Overleaf)
+report/*.aux
+report/*.log
+report/*.out
+report/*.synctex.gz
+
+# SO / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
